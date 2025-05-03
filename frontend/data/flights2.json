@@ -1,0 +1,129 @@
+[
+    {
+      "destination": "Madrid",
+      "departure": "10:30",
+      "flight": "IB4050",
+      "terminal": "A",
+      "status": "On Time"
+    },
+    {
+      "destination": "Paris",
+      "departure": "11:15",
+      "flight": "AF1201",
+      "terminal": "B",
+      "status": "Delayed"
+    },
+    {
+      "destination": "Berlin",
+      "departure": "12:00",
+      "flight": "LH789",
+      "terminal": "B",
+      "status": "On Time"
+    },
+    {
+      "destination": "Lisbon",
+      "departure": "12:45",
+      "flight": "TP332",
+      "terminal": "C",
+      "status": "On Time"
+    },
+    {
+      "destination": "London",
+      "departure": "13:10",
+      "flight": "BA981",
+      "terminal": "A",
+      "status": "Boarding"
+    },
+    {
+      "destination": "Rome",
+      "departure": "14:00",
+      "flight": "AZ610",
+      "terminal": "B",
+      "status": "Delayed"
+    },
+    {
+      "destination": "Amsterdam",
+      "departure": "14:30",
+      "flight": "KL456",
+      "terminal": "B",
+      "status": "On Time"
+    },
+    {
+      "destination": "Vienna",
+      "departure": "15:20",
+      "flight": "OS313",
+      "terminal": "C",
+      "status": "Boarding"
+    },
+    {
+      "destination": "Copenhagen",
+      "departure": "15:50",
+      "flight": "SK221",
+      "terminal": "D",
+      "status": "Cancelled"
+    },
+    {
+      "destination": "Zurich",
+      "departure": "16:05",
+      "flight": "LX715",
+      "terminal": "A",
+      "status": "On Time"
+    },
+    {
+      "destination": "Dublin",
+      "departure": "16:45",
+      "flight": "EI202",
+      "terminal": "C",
+      "status": "On Time"
+    },
+    {
+      "destination": "Helsinki",
+      "departure": "17:10",
+      "flight": "AY322",
+      "terminal": "D",
+      "status": "Delayed"
+    },
+    {
+      "destination": "Oslo",
+      "departure": "17:30",
+      "flight": "DY1043",
+      "terminal": "D",
+      "status": "On Time"
+    },
+    {
+      "destination": "Prague",
+      "departure": "17:50",
+      "flight": "OK789",
+      "terminal": "C",
+      "status": "Boarding"
+    },
+    {
+      "destination": "Warsaw",
+      "departure": "18:15",
+      "flight": "LO221",
+      "terminal": "B",
+      "status": "On Time"
+    },
+    {
+      "destination": "Brussels",
+      "departure": "18:40",
+      "flight": "SN431",
+      "terminal": "A",
+      "status": "Delayed"
+    },
+    {
+      "destination": "Athens",
+      "departure": "19:30",
+      "flight": "A3852",
+      "terminal": "C",
+      "status": "On Time"
+    },
+    {
+      "destination": "Reykjavik",
+      "departure": "20:00",
+      "flight": "FI542",
+      "terminal": "D",
+      "status": "On Time"
+    }
+  ]
+  
