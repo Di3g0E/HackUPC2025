@@ -3,7 +3,11 @@
 {
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = with pkgs; [
+    ruff
+    python312Packages.jedi-language-server
+    python312Packages.python-lsp-server
+  ];
 
   languages.python = {
     enable = true;
