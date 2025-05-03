@@ -1,0 +1,119 @@
+/* style.css - Versión energéticamente eficiente */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --bg-color: #fff;
+    --row-even: #f8f9fa;
+    --status-ontime: #27ae60;
+    --status-delayed: #e67e22;
+    --status-boarding: #2980b9;
+    --status-cancelled: #e74c3c;
+}
+
+/* Configuración base para eficiencia energética */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Fuentes del sistema para evitar carga de recursos externos */
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 1rem;
+    /* Evita animaciones y transiciones que consumen energía */
+    prefers-reduced-motion: reduce;
+}
+
+/* Estilos para el buscador - minimalista */
+#buscador {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5rem;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    /* Evita transformaciones que consumen GPU */
+}
+
+/* Estilos para la tabla - optimizados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    /* Sin sombras para reducir renderizado costoso */
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* Colores de estado con contraste suficiente */
+.status-on-time { color: var(--status-ontime); }
+.status-delayed { color: var(--status-delayed); }
+.status-boarding { color: var(--status-boarding); }
+.status-cancelled { color: var(--status-cancelled); }
+
+/* Estilos para el botón - minimalista */
+#receiver {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Sin hover effects para ahorrar energía */
+}
+
+/* Optimizaciones para móviles */
+@media (max-width: 600px) {
+    th, td {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+    
+    #buscador {
+        font-size: 0.9rem;
+    }
+}
+
+/* Modo oscuro para ahorrar energía en dispositivos OLED */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #ecf0f1;
+        --text-color: #ecf0f1;
+        --bg-color: #121212;
+        --row-even: #1e1e1e;
+    }
+    
+    table {
+        border-color: #444;
+    }
+    
+    th, td {
+        border-color: #444;
+    }
+    
+    #buscador {
+        background-color: #1e1e1e;
+        color: #ecf0f1;
+        border-color: #444;
+    }
+}
