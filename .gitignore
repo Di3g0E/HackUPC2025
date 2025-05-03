@@ -1,1 +1,3 @@
 backend/__pycache__
+backend/.secret_key
+backend/persistence.db
