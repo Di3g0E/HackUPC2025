@@ -1,4 +1,4 @@
-/* style.css - Versión energéticamente eficiente */
+/* style.css - Versión con hora de actualización */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -9,9 +9,9 @@
     --status-delayed: #e67e22;
     --status-boarding: #2980b9;
     --status-cancelled: #e74c3c;
+    --update-color: #7f8c8d;
 }
 
-/* Configuración base para eficiencia energética */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,16 +20,38 @@
 
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    /* Fuentes del sistema para evitar carga de recursos externos */
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 1rem;
-    /* Evita animaciones y transiciones que consumen energía */
     prefers-reduced-motion: reduce;
 }
 
-/* Estilos para el buscador - minimalista */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.last-update {
+    color: var(--update-color);
+    font-size: 0.875rem;
+    text-align: right;
+}
+
+#update-time {
+    font-weight: 600;
+}
+
+/* Resto de estilos se mantienen igual... */
 #buscador {
     width: 100%;
     max-width: 600px;
@@ -39,15 +61,12 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    /* Evita transformaciones que consumen GPU */
 }
 
-/* Estilos para la tabla - optimizados */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    /* Sin sombras para reducir renderizado costoso */
     border: 1px solid #ddd;
 }
 
@@ -63,13 +82,11 @@ th {
     font-weight: 600;
 }
 
-/* Colores de estado con contraste suficiente */
 .status-on-time { color: var(--status-ontime); }
 .status-delayed { color: var(--status-delayed); }
 .status-boarding { color: var(--status-boarding); }
 .status-cancelled { color: var(--status-cancelled); }
 
-/* Estilos para el botón - minimalista */
 #receiver {
     display: block;
     margin: 1rem auto;
@@ -79,11 +96,19 @@ th {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    /* Sin hover effects para ahorrar energía */
 }
 
-/* Optimizaciones para móviles */
 @media (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .last-update {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+    
     th, td {
         padding: 0.3rem;
         font-size: 0.9rem;
@@ -94,13 +119,13 @@ th {
     }
 }
 
-/* Modo oscuro para ahorrar energía en dispositivos OLED */
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #ecf0f1;
         --text-color: #ecf0f1;
         --bg-color: #121212;
         --row-even: #1e1e1e;
+        --update-color: #bdc3c7;
     }
     
     table {

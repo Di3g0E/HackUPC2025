@@ -54,3 +54,24 @@ document.getElementById("receiver").addEventListener("click", () => {
     })
     .catch(err => console.error("No se cargaron flights2.json:", err));
 });
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Función para formatear la fecha y hora
+  function formatUpdateTime() {
+      const now = new Date();
+      return now.toLocaleString(); // Esto mostrará fecha y hora según la configuración local
+  }
+
+  // Actualizar el timestamp inicial
+  document.getElementById('update-time').textContent = formatUpdateTime();
+
+  // Si tienes un botón que actualiza la información:
+  document.getElementById('receiver')?.addEventListener('click', function() {
+      // Tu lógica existente para actualizar los vuelos...
+      
+      // Luego actualiza el timestamp
+      document.getElementById('update-time').textContent = formatUpdateTime();
+  });
+});
